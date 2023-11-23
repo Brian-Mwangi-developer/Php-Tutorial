@@ -1,10 +1,16 @@
 <?php
 
 class Template{
-    function view($template){
+    private $layout;
+    protected $insideAndChildren;
+    public $accessibleFromEverywhere;
 
-
-        include 'view/' .$template .'.html';
+    public function __construct($layout){
+        $this->layout =$layout;
+    }
+    function view($template,$variables){
+        extract($variables);
+        include VIEW_PATH . '/layout/'. $this->layout . '.html';
     
     }
 }
