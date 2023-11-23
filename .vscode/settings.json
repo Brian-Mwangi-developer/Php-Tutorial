@@ -1,0 +1,4 @@
+{
+    "phpserver.phpPath": "/opt/lampp/bin/php",
+    "phpserver.serverPath": "/opt/lampp/htdocs"
+}
